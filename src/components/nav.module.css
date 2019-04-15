@@ -1,0 +1,67 @@
+header {
+  border-bottom: solid black 1px;
+  background-color: white;
+  overflow: auto;
+  padding: 80px 10px;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+#logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.7s;
+  position: relative;
+  left: 40%;
+}
+
+#motto {
+  color: darkgrey;
+  position: relative;
+  top: 45px;
+  left: 30%;
+  transition: 0.4s;
+}
+
+.link {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.link:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.active {
+  background-color: black;
+  color: white;
+}
+
+.rightAlign {
+  float: right;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 20px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}

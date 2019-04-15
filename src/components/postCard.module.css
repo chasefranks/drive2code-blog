@@ -1,0 +1,30 @@
+.card {
+  padding: 25px 5px 10px 25px;
+  margin: 10px 0px;
+  border: solid #f0f0f0 1px;
+  border-radius: 10px;
+}
+
+.card:hover {
+  background-color: #f0f0f0;
+}
+
+.cardTitle {
+  position: relative;
+}
+
+.card-title img {
+  height: 60px;
+  float: right;
+  position: absolute;
+  right: 10px;
+  top: -30px;
+}
+
+img {
+  height: 60px;
+}
+
+a {
+  text-decoration: none;
+}
