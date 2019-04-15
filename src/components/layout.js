@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import styles from "./layout.module.css"
 
 import Nav from "./nav"
 
@@ -31,7 +32,8 @@ const Layout = ({ children }) => (
         />
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Drive2Code
+          Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>

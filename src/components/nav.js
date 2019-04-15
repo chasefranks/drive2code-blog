@@ -6,6 +6,18 @@ class Nav extends Component {
 
   constructor(props) {
     super(props);
+
+    let links = [
+      { name: 'Home', to: '/' },
+      { name: 'About', to: '/about' },
+      { name: 'Basics', to: '/basics' },
+      { name: 'Books', to: '/books' }
+    ];
+
+    this.state = {
+      links
+    };
+
   }
 
   componentDidMount() {
@@ -33,29 +45,22 @@ class Nav extends Component {
   }
 
   render() {
+    let { links } = this.state;
     return (
       <header>
         <div id={styles.logo}>{this.props.siteTitle}</div>
         <p id={styles.motto}>{this.props.siteMotto}</p>
         <div className={styles.rightAlign}>
-          <Link
-            className={`${styles.active} ${styles.link}`}
-            to="/about"
-          >
-            About
-          </Link>
-          <Link
-            to="/basics"
-            className={styles.link}
-          >
-            Basics
-          </Link>
-          <Link
-            to="/books"
-            className={styles.link}
-          >
-            Books
-          </Link>
+          {links.map(link =>
+            <Link
+              key={link.name}
+              to={link.to}
+              className={styles.link}
+              activeClassName={styles.active}
+            >
+            {link.name}
+            </Link>
+          ) }
         </div>
       </header>
     )
