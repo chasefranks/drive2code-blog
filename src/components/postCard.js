@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styles from "./postCard.module.css";
 
 const linkStyle = {
-  'text-decoration': 'none',
+  'textDecoration': 'none',
   color: 'black'
 }
 
@@ -13,7 +13,6 @@ const PostCard = ({ link, title, date, icon, excerpt }) =>
       <div className={styles.cardTitle}>
         <h2>{title}</h2>
         <h3><em>{date}</em></h3>
-        <img src={icon}/>
       </div>
       <div>
         <p>{excerpt}</p>

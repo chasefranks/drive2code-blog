@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-import styles from "./layout.module.css"
+import "./layout.module.css"
 
 import Nav from "./nav"
 
