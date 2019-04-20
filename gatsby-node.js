@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 // enrich each markdown node with slug used to link to the page
@@ -26,6 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
     allMarkdownRemark {
       edges {
         node {
+          id
           fields {
             slug
           }
@@ -37,7 +39,13 @@ exports.createPages = ({ graphql, actions }) => {
     let { data: { allMarkdownRemark:  { edges } } } = result;
     edges.forEach(({ node }) => {
       console.log('creating page from node', node);
-      // createPage();
+      createPage({
+        path: node.fields.slug,
+        component: path.resolve('./src/components/post.js'),
+        context: {
+          id: node.id
+        }
+      })
     })
   });
 }
