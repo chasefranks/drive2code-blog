@@ -12,7 +12,7 @@ const PostCard = ({ link, title, date, icon, excerpt }) =>
     <div className={styles.card}>
       <div className={styles.cardTitle}>
         <h2>{title}</h2>
-        <h3><em>{date}</em></h3>
+        <h3><span className={styles.cardDate}>{date}</span></h3>
       </div>
       <div>
         <p>{excerpt}</p>

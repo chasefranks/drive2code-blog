@@ -18,6 +18,9 @@ class PostPager extends Component {
                       date
                       excerpt
                     }
+                    fields {
+                      slug
+                    }
                   }
                 }
               }
@@ -31,7 +34,7 @@ class PostPager extends Component {
               {posts.map((post, n) => (
                 <PostCard
                   key={n}
-                  link="/posts/gatsby.html"
+                  link={post.node.fields.slug}
                   title={post.node.frontmatter.title}
                   date={post.node.frontmatter.date}
                   icon="/images/gatsby-icon.svg"
