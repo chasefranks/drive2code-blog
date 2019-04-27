@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Drive2Code`,
-    motto: `A blog about being a developer...and a human`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    motto: `A blog about being a developer, and a human`,
+    description: `The personal blog of Chase Franks`,
     author: `Chase Franks`,
   },
   plugins: [
@@ -33,7 +33,15 @@ module.exports = {
       options: {
         pathToConfigModule: 'src/typography'
       }
-    }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/posts`
+      }
+    },
+    'gatsby-transformer-remark'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

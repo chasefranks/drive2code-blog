@@ -13,12 +13,17 @@
   position: relative;
 }
 
-.card-title img {
+.cardTitle img {
   height: 60px;
   float: right;
   position: absolute;
   right: 10px;
   top: -30px;
+}
+
+.cardDate {
+  color: lightgrey;
+  font-style: italic;
 }
 
 img {
