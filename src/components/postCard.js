@@ -11,6 +11,11 @@ const PostCard = ({ link, title, date, icon, excerpt }) =>
   <Link to={link} style={linkStyle} >
     <div className={styles.card}>
       <div className={styles.cardTitle}>
+        { icon ?
+          <div className={styles.icon}>
+            <img src={icon} alt={ `icon for ${title}` }/>
+          </div> : null
+        }
         <h2>{title}</h2>
         <h3><span className={styles.cardDate}>{date}</span></h3>
       </div>

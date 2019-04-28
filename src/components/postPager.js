@@ -17,6 +17,7 @@ class PostPager extends Component {
                       title
                       date
                       excerpt
+                      icon
                     }
                     fields {
                       slug
@@ -24,23 +25,34 @@ class PostPager extends Component {
                   }
                 }
               }
+              allFile(filter: { sourceInstanceName: {eq: "images" }}) {
+                edges {
+                  node {
+                    publicURL
+                  }
+                }
+              }
             }
           `
         }
-        render={(data) => {
-          let { allMarkdownRemark: { edges: posts } } = data;
+        render={(data) => {          
+          let posts = data.allMarkdownRemark.edges.map(edge => edge.node);
+          let images = data.allFile.edges.map(edge => edge.node)
           return (
             <div>
-              {posts.map((post, n) => (
-                <PostCard
-                  key={n}
-                  link={post.node.fields.slug}
-                  title={post.node.frontmatter.title}
-                  date={post.node.frontmatter.date}
-                  icon="/images/gatsby-icon.svg"
-                  excerpt={post.node.frontmatter.excerpt}
-                />
-              ))}
+              {posts.map((post, n) => {
+                let iconImage = images.find(image => image.publicURL.includes(post.frontmatter.icon));
+                return (
+                  <PostCard
+                    key={n}
+                    link={post.fields.slug}
+                    title={post.frontmatter.title}
+                    date={post.frontmatter.date}
+                    icon={iconImage ? iconImage.publicURL : null}
+                    excerpt={post.frontmatter.excerpt}
+                  />
+                )
+              })}
             </div>
           )
         }}

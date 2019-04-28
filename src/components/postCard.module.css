@@ -15,10 +15,7 @@
 
 .cardTitle img {
   height: 60px;
-  float: right;
-  position: absolute;
-  right: 10px;
-  top: -30px;
+  margin: 0px;
 }
 
 .cardDate {
@@ -26,8 +23,9 @@
   font-style: italic;
 }
 
-img {
-  height: 60px;
+.icon {
+  margin: auto;
+  width: 60px;
 }
 
 a {

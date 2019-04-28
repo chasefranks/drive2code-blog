@@ -5,7 +5,7 @@ import Layout from './layout';
 const Post = ({ data }) => {
   let post = data.markdownRemark;
   return (
-    <Layout>
+    <Layout>      
       <div dangerouslySetInnerHTML = {{ __html: post.html }}></div>
     </Layout>
   )
@@ -17,6 +17,7 @@ export const query = graphql`
       frontmatter {
         title
         excerpt
+        icon
       }
       html
     }
