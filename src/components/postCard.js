@@ -12,7 +12,9 @@ const PostCard = ({ link, title, date, icon, excerpt }) =>
     <div className={styles.card}>
       <div className={styles.cardTitle}>
         { icon ?
-          <div style={{margin: 'auto', width: '60px'}}><img src={icon} alt={ `icon for ${title}` }/></div> : null
+          <div className={styles.icon}>
+            <img src={icon} alt={ `icon for ${title}` }/>
+          </div> : null
         }
         <h2>{title}</h2>
         <h3><span className={styles.cardDate}>{date}</span></h3>

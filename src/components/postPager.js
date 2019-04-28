@@ -35,29 +35,21 @@ class PostPager extends Component {
             }
           `
         }
-        render={(data) => {
-          let {
-            allMarkdownRemark: {
-              edges: posts
-            },
-            allFile: {
-              edges: images
-            }
-          } = data; // TODO destructure into the array as well, so posts is an array of markdown remark nodes, images is an array of file nodes, etc. and we dont' have to descend into the node property
-
+        render={(data) => {          
+          let posts = data.allMarkdownRemark.edges.map(edge => edge.node);
+          let images = data.allFile.edges.map(edge => edge.node)
           return (
             <div>
               {posts.map((post, n) => {
-                let iconImage = images.find(image => image.node.publicURL.includes(post.node.frontmatter.icon));
-
+                let iconImage = images.find(image => image.publicURL.includes(post.frontmatter.icon));
                 return (
                   <PostCard
                     key={n}
-                    link={post.node.fields.slug}
-                    title={post.node.frontmatter.title}
-                    date={post.node.frontmatter.date}
-                    icon={iconImage ? iconImage.node.publicURL : null}
-                    excerpt={post.node.frontmatter.excerpt}
+                    link={post.fields.slug}
+                    title={post.frontmatter.title}
+                    date={post.frontmatter.date}
+                    icon={iconImage ? iconImage.publicURL : null}
+                    excerpt={post.frontmatter.excerpt}
                   />
                 )
               })}
