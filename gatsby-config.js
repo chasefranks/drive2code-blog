@@ -4,7 +4,8 @@ module.exports = {
     motto: `A blog about being a developer, and a human`,
     description: `The personal blog of Chase Franks`,
     author: `Chase Franks`,
-    email: `clf11235@gmail.com`
+    email: `clf11235@gmail.com`,
+    about: `A fullstack Javascript developer working in the Dallas Fort Worth area. Interest include ReactJS, ExpressJS, NodeJS, and anything devops cloud. A firm adherent to software craftsmanship and available for hire.`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
