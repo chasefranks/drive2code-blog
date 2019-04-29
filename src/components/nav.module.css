@@ -1,7 +1,6 @@
 header {
   border-bottom: solid black 1px;
   background-color: white;
-  overflow: auto;
   padding: 80px 10px;
   transition: 0.4s;
   position: fixed;
