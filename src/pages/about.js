@@ -3,32 +3,27 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-//
-// "site": {
-//       "siteMetadata": {
-//         "description": "The personal blog of Chase Franks",
-//         "author": "Chase Franks",
-//         "email": "clf11235@gmail.com",
-//         "about": "A fullstack Javascript developer working in the Dallas Fort Worth area. Interest include ReactJS, ExpressJS, NodeJS, and anything devops cloud. A firm adherent to software craftsmanship and available for hire."
-//       }
-//     }
+import styles from "./about.module.css"
 
 const About = ({ data }) => {
-  let { site: { siteMetadata: { about, email } } } = data;
+  let {
+    site: {
+      siteMetadata: {
+        about,
+        email
+      }
+    },
+    file: {
+      publicURL: profileSrc
+    }
+  } = data;
   return (
     <Layout>
       <SEO title="About Me" />
       <h2>About Me</h2>
       <img
-        style={
-          {
-            height: '200px',
-            float: 'right',
-            'border-radius': '100px',
-            'margin-left': '25px'
-          }
-        }
-        src="/static/profile-b3b6b3de0797bd13ec90ab92515ce091.jpg"
+        className={styles.profile}
+        src={profileSrc}
         alt="a profile pic of blogger drive2code"
       />
       <p>{about}</p>
@@ -50,6 +45,9 @@ export const query = graphql`
         email
         about
       }
+    }
+    file(relativePath: {eq: "profile.jpg" }) {
+      publicURL
     }
   }
 `
