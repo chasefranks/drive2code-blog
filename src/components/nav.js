@@ -15,41 +15,42 @@ class Nav extends Component {
     ];
 
     this.state = {
-      links
+      links,
+      size: 'LARGE'
     };
 
   }
 
   componentDidMount() {
-
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (
-          document.body.scrollTop > 80 ||
-          document.documentElement.scrollTop > 80
-      ) {
-        document.getElementsByTagName('header')[0].style.padding = "0px 10px";
-        document.getElementById(styles.logo).style.fontSize = "20px";
-        document.getElementById(styles.logo).style.left="0%";
-        document.getElementById(styles.motto).style.left="0%";
-        document.getElementById(styles.motto).style.top="6px";
+    window.onscroll = () => {
+      if ( document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        this.setState({
+          size: 'SMALL'
+        })
       } else {
-        document.getElementsByTagName('header')[0].style.padding = "80px 10px";
-        document.getElementById(styles.logo).style.fontSize = "35px";
-        document.getElementById(styles.logo).style.left="40%";
-        document.getElementById(styles.motto).style.left="30%";
-        document.getElementById(styles.motto).style.top="45px";
+        this.setState({
+          size: 'LARGE'
+        })
       }
     }
   }
 
   render() {
-    let { links } = this.state;
+    let { links, size } = this.state;
     return (
-      <header>
-        <div id={styles.logo}>{this.props.siteTitle}</div>
-        <p id={styles.motto}>{this.props.siteMotto}</p>
+      <header
+        className={size==='LARGE' ? styles.headerLarge : styles.headerSmall}
+      >
+        <div
+          className={size === 'LARGE' ? styles.logoLarge : styles.logoSmall}
+        >
+          {this.props.siteTitle}
+        </div>
+        <p
+          className={size === 'LARGE' ? styles.mottoLarge : styles.mottoSmall}
+        >
+          {this.props.siteMotto}
+        </p>
         <div className={styles.rightAlign}>
           {links.map(link =>
             <Link

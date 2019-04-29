@@ -10,7 +10,17 @@ header {
   z-index: 100;
 }
 
-#logo {
+.header-small {
+  padding: 0px 10px;
+  transition: 0.4s;
+}
+
+.header-large {
+  padding: 80px 10px;
+  transition: 0.4s;
+}
+
+.logo-large {
   font-size: 35px;
   font-weight: bold;
   transition: 0.7s;
@@ -18,11 +28,27 @@ header {
   left: 40%;
 }
 
-#motto {
+.logo-small {
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.7s;
+  position: relative;
+  left: 0%;
+}
+
+.motto-large {
   color: darkgrey;
   position: relative;
   top: 45px;
   left: 30%;
+  transition: 0.4s;
+}
+
+.motto-small {
+  color: darkgrey;
+  position: relative;
+  top: 6px;
+  left: 0%;
   transition: 0.4s;
 }
 
