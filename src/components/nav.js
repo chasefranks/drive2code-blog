@@ -44,14 +44,14 @@ class Nav extends Component {
         <div
           className={size === 'LARGE' ? styles.logoLarge : styles.logoSmall}
         >
-          {this.props.siteTitle}
+          {this.props.siteTitle + (size === 'LARGE' ? '' : '://')}
         </div>
         <p
           className={size === 'LARGE' ? styles.mottoLarge : styles.mottoSmall}
         >
           {this.props.siteMotto}
         </p>
-        <div className={styles.rightAlign}>
+        <nav className={styles.rightAlign}>
           {links.map(link =>
             <Link
               key={link.name}
@@ -62,7 +62,7 @@ class Nav extends Component {
             {link.name}
             </Link>
           ) }
-        </div>
+        </nav>
       </header>
     )
   }
