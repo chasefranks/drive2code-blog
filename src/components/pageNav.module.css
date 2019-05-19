@@ -1,0 +1,26 @@
+.nav-controls {
+  margin: auto;
+  width: 50%;
+}
+
+.nav-link {
+  margin: 10px 15px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  border: none;
+  width: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.nav-button:focus {
+  outline-color: lightgrey;
+}

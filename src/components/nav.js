@@ -9,9 +9,10 @@ class Nav extends Component {
 
     let links = [
       { name: 'Home', to: '/' },
+      { name: 'Posts', to: '/posts' },
       { name: 'About', to: '/about' },
-      { name: 'Basics', to: '/basics' },
-      { name: 'Books', to: '/books' }
+      // { name: 'Basics', to: '/basics' },
+      // { name: 'Books', to: '/books' }
     ];
 
     this.state = {
