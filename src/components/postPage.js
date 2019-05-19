@@ -7,7 +7,6 @@ import PageNav from './pageNav'
 
 const PostPage = ({ data, pageContext }) => {
 
-  console.log(pageContext)
   let posts = data.allMarkdownRemark.edges.map(edge => edge.node);
   let images = data.allFile.edges.map(edge => edge.node)
 

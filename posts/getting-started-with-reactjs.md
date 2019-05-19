@@ -1,6 +1,6 @@
 ---
 title: Getting Started with ReactJS
-date: April 1, 2019
+date:  2019-04-01
 icon: react
 excerpt: Let's get started with ReactJS today!
 ---
