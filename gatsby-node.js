@@ -5,6 +5,7 @@
  */
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const { paginate } = require('gatsby-awesome-pagination');
 
 // enrich each markdown node with slug used to link to the page
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -28,6 +29,12 @@ exports.createPages = ({ graphql, actions }) => {
       edges {
         node {
           id
+          frontmatter {
+            title
+            date
+            excerpt
+            icon
+          }
           fields {
             slug
           }
@@ -37,6 +44,17 @@ exports.createPages = ({ graphql, actions }) => {
   }
   `).then((result) => {
     let { data: { allMarkdownRemark:  { edges } } } = result;
+
+    // create page for each page of posts: posts, posts/2, etc
+    paginate({
+      createPage,
+      items: edges,
+      itemsPerPage: 5,
+      pathPrefix: '/posts',
+      component: path.resolve('./src/components/postPage.js')
+    })
+
+    // create page for each blog post
     edges.forEach(({ node }) => {
       console.log('creating page from node', node);
       createPage({
