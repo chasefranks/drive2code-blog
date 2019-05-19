@@ -3,9 +3,11 @@ import { graphql } from 'gatsby'
 
 import Layout from './layout'
 import PostCard from './postCard'
+import PageNav from './pageNav'
 
-const PostPage = ({ data }) => {
+const PostPage = ({ data, pageContext }) => {
 
+  console.log(pageContext)
   let posts = data.allMarkdownRemark.edges.map(edge => edge.node);
   let images = data.allFile.edges.map(edge => edge.node)
 
@@ -27,6 +29,10 @@ const PostPage = ({ data }) => {
             )
           })
         }
+        <PageNav
+          previousPagePath={pageContext.previousPagePath}
+          nextPagePath={pageContext.nextPagePath}
+        />
       </div>
     </Layout>
   )

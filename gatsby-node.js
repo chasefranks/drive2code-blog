@@ -29,12 +29,6 @@ exports.createPages = ({ graphql, actions }) => {
       edges {
         node {
           id
-          frontmatter {
-            title
-            date
-            excerpt
-            icon
-          }
           fields {
             slug
           }
@@ -56,7 +50,6 @@ exports.createPages = ({ graphql, actions }) => {
 
     // create page for each blog post
     edges.forEach(({ node }) => {
-      console.log('creating page from node', node);
       createPage({
         path: node.fields.slug,
         component: path.resolve('./src/components/post.js'),
