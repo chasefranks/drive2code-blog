@@ -50,7 +50,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
-            date
+            date(formatString: "MMMM d, YYYY")
             excerpt
             icon
           }

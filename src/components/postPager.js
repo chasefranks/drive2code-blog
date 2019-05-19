@@ -15,7 +15,7 @@ class PostPager extends Component {
                   node {
                     frontmatter {
                       title
-                      date
+                      date(formatString: "MMMM d, YYYY")
                       excerpt
                       icon
                     }
@@ -35,7 +35,7 @@ class PostPager extends Component {
             }
           `
         }
-        render={(data) => {          
+        render={(data) => {
           let posts = data.allMarkdownRemark.edges.map(edge => edge.node);
           let images = data.allFile.edges.map(edge => edge.node)
           return (
