@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "drive2code-gatsby",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "My personal blog http://drive2code.com written in Gatsby",
+  "version": "1.0.0",
+  "author": "Chase Franks <clf112358@gmail.com>",
   "dependencies": {
     "gatsby": "^2.2.5",
     "gatsby-awesome-pagination": "^0.3.4",
@@ -45,9 +45,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/chasefranks/drive2code-blog"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/chasefranks/drive2code-blog/issues"
   }
 }
