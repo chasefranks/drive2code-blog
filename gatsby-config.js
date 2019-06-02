@@ -4,11 +4,23 @@ module.exports = {
     motto: `A blog about being a developer, and a human`,
     description: `The personal blog of Chase Franks`,
     author: `Chase Franks`,
-    email: `clf11235@gmail.com`,
-    about: `A fullstack Javascript developer working in the Dallas Fort Worth area. Interest include ReactJS, ExpressJS, NodeJS, and anything devops cloud. A firm adherent to software craftsmanship and available for hire.`
+    email: `chase.franks@drive2code.com`,
+    about: `My name is Chase Franks, and I'm a fullstack Javascript developer working in the Dallas Fort Worth area. My interests include ReactJS, NodeJS, APIs and serverless, and anything that makes development fun, productive, and enjoyable. A firm adherent to software craftsmanship and writing clean code.`,
+    social: {
+      email: `mailto:chase.franks@drive2code.com`,
+      github: `https://github.com/chasefranks`,
+      linkedin: `https://www.linkedin.com/in/chasefranks`
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'social-icons',
+        path: `${__dirname}/src/images/icons/social`
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

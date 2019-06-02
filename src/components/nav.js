@@ -7,6 +7,7 @@ class Nav extends Component {
   constructor(props) {
     super(props);
 
+    // TODO can we get this from GraphQL instead?
     let links = [
       { name: 'Home', to: '/' },
       { name: 'Posts', to: '/posts' },

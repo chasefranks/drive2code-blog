@@ -11,6 +11,7 @@ import { StaticQuery, graphql } from "gatsby"
 import "./layout.module.css"
 
 import Nav from "./nav"
+import Footer from "./footer"
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -25,19 +26,14 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <Nav
           siteTitle={data.site.siteMetadata.title}
           siteMotto={data.site.siteMetadata.motto}
         />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Drive2Code
-          Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </>
+        <Footer />
+      </div>
     )}
   />
 )
