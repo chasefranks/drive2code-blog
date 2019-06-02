@@ -12,7 +12,7 @@ const LatestPost = ({ data }) => (
             link={node.fields.slug}
             title={node.frontmatter.title}
             date={node.frontmatter.date}
-            excerpt={node.frontmatter.excerpt}
+            excerpt={node.excerpt}
           />
         )
     }

@@ -30,9 +30,9 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "MMMM D, YYYY")
-            excerpt
             icon
           }
+          excerpt
           fields {
             slug
           }

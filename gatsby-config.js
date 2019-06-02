@@ -5,7 +5,7 @@ module.exports = {
     description: `The personal blog of Chase Franks`,
     author: `Chase Franks`,
     email: `chase.franks@drive2code.com`,
-    about: `My name is Chase Franks, and I'm a fullstack Javascript developer working in the Dallas Fort Worth area. My interests include ReactJS, NodeJS, APIs and serverless, and anything that makes development fun, productive, and enjoyable. A firm adherent to software craftsmanship and writing clean code.`,
+    about: `My name is Chase Franks, and I'm a fullstack Javascript developer working in the Dallas Fort Worth area. My interests include ReactJS, NodeJS, APIs and serverless, and anything that makes development fun, productive, and enjoyable. A firm adherent to software craftsmanship and writing clean code. When all else fails, I just push buttons until it looks right.`,
     social: {
       email: `mailto:chase.franks@drive2code.com`,
       github: `https://github.com/chasefranks`,
