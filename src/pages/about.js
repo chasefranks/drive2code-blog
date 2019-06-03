@@ -31,7 +31,7 @@ const About = ({ data }) => {
       />
       <p>{about}</p>
       <h3>Contact</h3>
-      <p>I'm not really on social media, so feel free to contact me via email to network or ask questions about software develpment</p>
+      <p>Feel free to contact me via email to network, suggest topics, or ask questions about software develpment.</p>
       <p><a href={`mailto:${email}`}>Email</a></p>
     </Layout>
   )

@@ -5,7 +5,8 @@ import Layout from './layout';
 const Post = ({ data }) => {
   let post = data.markdownRemark;
   return (
-    <Layout>      
+    <Layout>
+      <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML = {{ __html: post.html }}></div>
     </Layout>
   )
@@ -16,7 +17,6 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        excerpt
         icon
       }
       html

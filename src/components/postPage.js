@@ -23,7 +23,7 @@ const PostPage = ({ data, pageContext }) => {
                 title={post.frontmatter.title}
                 date={post.frontmatter.date}
                 icon={iconImage ? iconImage.publicURL : null}
-                excerpt={post.frontmatter.excerpt}
+                excerpt={post.excerpt}
               />
             )
           })
@@ -51,9 +51,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMMM D, YYYY")
-            excerpt
             icon
           }
+          excerpt
           fields {
             slug
           }
