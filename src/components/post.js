@@ -17,7 +17,6 @@ export const query = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        excerpt
         icon
       }
       html
