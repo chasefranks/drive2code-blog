@@ -1,9 +1,7 @@
 ---
 title: 'A life offline: some tips'
-date: 2019-03-30
-excerpt: I've been living offline for the past few months (for various reasons), and would like to discuss how I've adapted and some tips and tricks I've picked up along the way.
+date: 2019-06-23
 ---
-# A life offline: some tips
 
 I've been living offline for the past few months (for various reasons), and would like to discuss how I've adapted and some tips and tricks I've picked up along the way.
 
@@ -15,7 +13,7 @@ Check out [`youtube-dl`](https://ytdl-org.github.io/youtube-dl/). This little ge
 
 ## Free Places
 
-Starbucks is always available, although I feel like I need to keep drinking coffee while I'm there, so there's a time limit. There is also internet at my work, but it's at `work`. That seems to be all I do now days anyway, but still. I do use the free internet in the community area where I live quite a bit, and have found it to be decent.
+Starbucks is always available, and like a lot of cafes, they provide free internet for their customers (although I feel like I need to keep drinking coffee while I'm there, so there's a time limit). There is also internet at my work, but it's at `work`. That seems to be all I do now days anyway, but still. I do use the free internet in the community area where I live quite a bit, and have found it to be decent.
 
 ## Focus
 
@@ -31,3 +29,7 @@ So if you are skittish like me what do you do? One thing that worked for me was 
 It's impossible to type a message of any length and really communicate in writing with someone using a cell, so I do the last one a lot.
 
 I kind of liked this approach, since it forced me to focus on what I needed to get done.
+
+## Conclusion
+
+As of this writing, I now have home internet and have resumed consuming those succulent bytes. Doing without however, makes you realize what something really is. I grew up without internet, and know that even today you can live without it in your home. It *is* kind of boring, but it's not the end of the world.
