@@ -7,8 +7,8 @@ import Social from './social'
 const Footer = () => (
   <footer>
     <div className={styles.contentWrapper}>
-      <div className={styles.left}>
-        Powered by <a href="https://www.gatsbyjs.org">Gatsby</a>
+      Powered by <a href="https://www.gatsbyjs.org">Gatsby</a>
+      <div className={styles.left}>        
         <Social />
       </div>
       <div className={styles.right}>

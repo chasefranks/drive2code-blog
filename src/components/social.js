@@ -31,7 +31,7 @@ const Social = ({ data }) => (
         let icons = data.allFile.edges.map(edge => edge.node.publicURL)
         return (
           <div>
-            <p>Find Me:<br/>
+            <p style={{margin: '0px'}}>Find Me:</p>
               {
                 channels.map(channel => {
                   let channelIcon = icons.find(icon => icon.includes(channel))
@@ -48,7 +48,6 @@ const Social = ({ data }) => (
                   )
                 })
               }
-            </p>
           </div>
         )
       }
