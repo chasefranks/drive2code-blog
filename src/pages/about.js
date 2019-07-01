@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import styles from "./about.module.css"
 
 const About = ({ data }) => {
@@ -21,14 +20,13 @@ const About = ({ data }) => {
     }
   } = data;
   return (
-    <Layout>
-      <SEO title="About Me" />
-      <h2>About Me</h2>
+    <Layout>      
       <Img
         className={styles.profile}
         fixed={fixed}
         alt="a profile pic of blogger drive2code"
       />
+      <h2>About Me</h2>
       <p>{about}</p>
       <h3>Contact</h3>
       <p>Feel free to contact me via email to network, suggest topics, or ask questions about software develpment.</p>
