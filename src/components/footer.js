@@ -20,7 +20,7 @@ const Footer = () => (
         </ul>
       </div>
     </div>
-    <div class={styles.copyright}>
+    <div className={styles.copyright}>
       <Link to='/'>Drive2Code</Link> © {new Date().getFullYear()}
     </div>
   </footer>

@@ -36,7 +36,7 @@ const Social = ({ data }) => (
                 channels.map(channel => {
                   let channelIcon = icons.find(icon => icon.includes(channel))
                   return (
-                    <span>
+                    <span key={channel}>
                       <a href={social[channel]}>
                         <img
                           className={styles.icon}
