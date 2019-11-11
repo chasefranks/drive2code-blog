@@ -1,5 +1,7 @@
-.icon {
-  height: 25px;
-  width: 25px;
-  margin: 5px 5px;
+.findMe p {
+  margin: 0px;
+}
+
+.findMe a {
+  margin: 0px 5px;
 }

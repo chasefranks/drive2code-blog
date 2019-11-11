@@ -7,8 +7,9 @@ const LatestPost = ({ data }) => (
     {
       data.allMarkdownRemark.edges
         .map(edge => edge.node)
-        .map(node =>
+        .map((node, index) =>
           <PostCard
+            key={index}
             link={node.fields.slug}
             title={node.frontmatter.title}
             date={node.frontmatter.date}
