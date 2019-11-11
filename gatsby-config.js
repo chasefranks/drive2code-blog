@@ -15,13 +15,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'social-icons',
-        path: `${__dirname}/src/images/icons/social`
-      }
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -30,7 +23,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // TODO what does this do? does icon become the favicon?
     // {
     //   resolve: `gatsby-plugin-manifest`,
     //   options: {

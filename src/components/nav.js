@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import FontAwesome from "react-fontawesome"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 import classnames from "classnames"
 
 import styles from "./nav.module.css";
@@ -77,14 +78,14 @@ class Nav extends Component {
           {this.props.siteMotto}
         </p>
         <div id={styles.mobileNavToggle}>
-          <FontAwesome 
-            name="bars"
+          <FontAwesomeIcon 
+            icon={faBars}
             size="2x" 
             onClick={this.toggleMobile.bind(this)}
             className={classnames(styles.rightAlign, { [`${styles.hide}`]: this.state.mobile.expanded })}
           />
-          <FontAwesome 
-            name="times"
+          <FontAwesomeIcon
+            icon={faTimes}
             size="2x" 
             onClick={this.toggleMobile.bind(this)}
             className={classnames(styles.rightAlign, { [`${styles.hide}`]: !this.state.mobile.expanded })}

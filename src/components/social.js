@@ -1,5 +1,9 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 import styles from "./social.module.css"
 
 const Social = ({ data }) => (
@@ -15,39 +19,31 @@ const Social = ({ data }) => (
             }
           }
         }
-        allFile(filter: { sourceInstanceName: {eq: "social-icons" }}) {
-          edges {
-            node {
-              publicURL
-            }
-          }
-        }
       }
     `}
     render={
       data => {
         let social = data.site.siteMetadata.social
         let channels = Object.keys(social)
-        let icons = data.allFile.edges.map(edge => edge.node.publicURL)
+        // map of social channel to fontawesome icon
+        const channelToIcon = {
+          email: faEnvelope,
+          github: faGithub,
+          linkedin: faLinkedin
+        }
         return (
-          <div>
-            <p style={{margin: '0px'}}>Find Me:</p>
-              {
-                channels.map(channel => {
-                  let channelIcon = icons.find(icon => icon.includes(channel))
-                  return (
-                    <span key={channel}>
-                      <a href={social[channel]}>
-                        <img
-                          className={styles.icon}
-                          src={channelIcon}
-                          alt={`social icon for ${channel}`}
-                        />
-                      </a>
-                    </span>
-                  )
-                })
-              }
+          <div className={styles.findMe}>
+            <p>Find Me:</p>
+            {
+              channels.map(channel => (
+                <a key={channel} href={social[channel]}>
+                  <FontAwesomeIcon 
+                    icon={channelToIcon[channel]}
+                    size="lg"
+                  />
+                </a>
+              ))
+            }
           </div>
         )
       }
