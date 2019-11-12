@@ -2,6 +2,7 @@
 title: We Made It To Gatsby
 date: 2019-06-02
 icon: gatsby
+disqus: false
 ---
 
 Welcome to the new blog, entirely redone in Gatsby!

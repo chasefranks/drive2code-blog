@@ -1,6 +1,7 @@
 ---
 title: 'A life offline: some tips'
 date: 2019-06-23
+disqus: true
 ---
 
 I've been living offline for the past few months (for various reasons), and would like to discuss how I've adapted and some tips and tricks I've picked up along the way.
