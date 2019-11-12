@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Drive2Code`,
+    url: `https://drive2code.com`,
     motto: `A blog about being a developer, and a human`,
     description: `The personal blog of Chase Franks`,
     author: `Chase Franks`,
@@ -68,6 +69,12 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`
           }
         ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `drive2code-gatsby`
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
