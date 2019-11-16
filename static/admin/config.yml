@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: chasefranks/drive2code-blog
-  branch: feature/netlify-cms
+  branch: posts
 
 media_folder: static/assets/images
 public_folder: assets/images
