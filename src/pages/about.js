@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import profile from "../images/profile.jpg";
 
 import Layout from "../components/layout"
 import styles from "./about.module.css"
@@ -12,20 +12,11 @@ const About = ({ data }) => {
         about,
         email
       }
-    },
-    filename: {
-      childImageSharp: {
-        fixed
-      }
     }
   } = data;
   return (
-    <Layout>      
-      <Img
-        className={styles.profile}
-        fixed={fixed}
-        alt="a profile pic of blogger drive2code"
-      />
+    <Layout>
+      <img className={styles.profile} src={profile} />
       <h2>About Me</h2>
       <p>{about}</p>
       <h3>Contact</h3>
@@ -47,21 +38,5 @@ export const query = graphql`
         about
       }
     }
-    filename: file(relativePath: { eq: "profile.jpg" }) {
-      childImageSharp {
-        fixed(height: 200, width: 200) {
-          base64
-          tracedSVG
-          aspectRatio
-          width
-          height
-          src
-          srcSet
-          srcWebp
-          srcSetWebp
-          originalName
-        }
-      }
-  	}
   }
 `

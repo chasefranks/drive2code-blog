@@ -1,0 +1,35 @@
+backend:
+  name: github
+  repo: chasefranks/drive2code-blog
+  branch: feature/netlify-cms
+
+media_folder: static/assets/images
+public_folder: assets/images
+
+collections:
+  - name: "blog"
+    label: "Post"
+    folder: "posts"
+    create: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Icon"
+        name: "icon"
+        required: false
+        widget: "select"
+        options:
+          - "gatsby"
+          - "react"
+          - "webpack"      
+      - label: "Comments Allowed"
+        name: "disqus"
+        widget: "boolean"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
