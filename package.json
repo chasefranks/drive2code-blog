@@ -2,7 +2,7 @@
   "name": "drive2code-gatsby",
   "private": true,
   "description": "My personal blog http://drive2code.com written in Gatsby",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "Chase Franks <clf112358@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
