@@ -83,7 +83,13 @@ The last 5 hex characters are the random component-unique aspect I referred to e
 
 This guarantees that our card class will not conflict with anyone else's, and we can use class names like card in our styles with impunity. Fun stuff right?
 
-In our project, we had hundreds of React components like views, shared components, etc that all had simple global style imports like "import "./Card.css". When I took out a spike story and upgraded the Next and React dependencies, I immediately got this error message from the NextJS webpack build
+In our project, we had hundreds of React components like views, shared components, etc that all had simple global style imports like 
+
+```js
+import "./Card.css"
+```
+
+When I took out a spike story and upgraded the Next and React dependencies, I immediately got this error message from the NextJS webpack build
 
 ```
 Global CSS cannot be imported from files other than your Custom <App>. Please move all global CSS imports to pages/_app.js.
