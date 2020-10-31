@@ -1,6 +1,7 @@
 ---
 title: Migrating to NextJS 9.5
 date: 2020-10-12T03:26:55.485Z
+disqus: true
 ---
 I recently led an effort to migrate our main website at work to NextJS 9.5, and would like to share my thoughts and a few hurdles we had to overcome, mainly in the area of CSS and how our styling is developed and applied. This is meant to be a lighthearted and cathartic discussion, and will be intentionally conversational with the details.
 
